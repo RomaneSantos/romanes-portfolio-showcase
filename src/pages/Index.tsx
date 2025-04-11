@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { 
   Code, 
@@ -16,7 +15,7 @@ import {
   Database, 
   Settings
 } from "lucide-react";
-import Navbar from "@/components/Navbar";
+import NavbarWithThemeToggle from "@/components/NavbarWithThemeToggle";
 import Footer from "@/components/Footer";
 import SkillCard from "@/components/SkillCard";
 import TimelineItem from "@/components/TimelineItem";
@@ -47,12 +46,12 @@ export default function Index() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <NavbarWithThemeToggle />
       
       {/* Hero Section */}
       <section 
         id="home" 
-        className="min-h-screen flex items-center justify-center bg-gradient-to-br from-tech-blue/10 to-background pt-16"
+        className="min-h-screen flex items-center justify-center bg-gradient-to-br from-tech-blue/10 to-background dark:from-tech-blue/5 dark:to-background pt-16"
       >
         <div className="container mx-auto px-4 md:px-6 py-12">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
@@ -105,7 +104,7 @@ export default function Index() {
       </section>
 
       {/* Sobre Mim Section */}
-      <section id="sobre" className="py-20 bg-white">
+      <section id="sobre" className="py-20 bg-white dark:bg-tech-darkblue dark:text-white">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="section-title opacity-0 animate-on-scroll">Sobre Mim</h2>
           
@@ -201,7 +200,7 @@ export default function Index() {
       </section>
 
       {/* Experiência Section */}
-      <section id="experiencia" className="py-20 bg-gray-50">
+      <section id="experiencia" className="py-20 bg-gray-50 dark:bg-tech-gray dark:text-white">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="section-title opacity-0 animate-on-scroll">Experiência Profissional</h2>
           
@@ -283,7 +282,7 @@ export default function Index() {
       </section>
 
       {/* Escolaridade Section */}
-      <section id="escolaridade" className="py-20 bg-white">
+      <section id="escolaridade" className="py-20 bg-white dark:bg-tech-darkblue dark:text-white">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="section-title opacity-0 animate-on-scroll">Formação Acadêmica</h2>
           

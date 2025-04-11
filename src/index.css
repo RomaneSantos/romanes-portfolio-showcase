@@ -104,16 +104,16 @@
 
 @layer components {
   .section-title {
-    @apply text-3xl font-bold mb-6 text-tech-blue relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-tech-blue;
+    @apply text-3xl font-bold mb-6 text-tech-blue relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-2/3 after:h-1 after:bg-tech-blue dark:text-primary dark:after:bg-primary;
   }
 
   .timeline-item {
-    @apply relative pl-8 pb-10 border-l border-tech-blue;
+    @apply relative pl-8 pb-10 border-l border-tech-blue dark:border-primary;
   }
 
   .timeline-item::before {
     content: '';
-    @apply absolute -left-[7px] top-1 w-3 h-3 bg-tech-blue rounded-full;
+    @apply absolute -left-[7px] top-1 w-3 h-3 bg-tech-blue dark:bg-primary rounded-full;
   }
 
   .timeline-item:last-child {
@@ -125,14 +125,14 @@
   }
 
   .nav-link {
-    @apply relative text-foreground hover:text-tech-blue transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tech-blue after:transition-all after:duration-200 hover:after:w-full;
+    @apply relative text-foreground hover:text-tech-blue transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tech-blue after:transition-all after:duration-200 hover:after:w-full dark:hover:text-primary dark:after:bg-primary;
   }
 
   .nav-link.active {
-    @apply text-tech-blue after:w-full;
+    @apply text-tech-blue dark:text-primary after:w-full;
   }
 
   .contact-link {
-    @apply flex items-center text-foreground hover:text-tech-blue transition-colors duration-200;
+    @apply flex items-center text-foreground hover:text-tech-blue transition-colors duration-200 dark:text-white dark:hover:text-primary;
   }
 }
