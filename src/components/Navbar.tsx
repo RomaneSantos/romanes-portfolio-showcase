@@ -16,8 +16,10 @@ export default function Navbar() {
       const sections = document.querySelectorAll('section[id]');
       
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
+        // Cast to HTMLElement to access offsetTop and offsetHeight
+        const htmlSection = section as HTMLElement;
+        const sectionTop = htmlSection.offsetTop - 100;
+        const sectionHeight = htmlSection.offsetHeight;
         const sectionId = section.getAttribute('id') || '';
         
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
